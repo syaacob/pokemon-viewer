@@ -3,7 +3,7 @@
 ### Guides
 
 spring-boot  required java 21 to run.
-to run unit test and integration test, it's required to docker. otherwise test will fail.
+docker are required to run unit test and integration test. otherwise test will fail.
 backend service is running on port 8080.
 
 #### to run backend execute
@@ -19,5 +19,6 @@ backend service is running on port 8080.
 ### Receipies
 - Java 21
 - Spring Boot 3.3
+- Spring Boot Test Containers
 - Angular 18
 - Angular Material UI
