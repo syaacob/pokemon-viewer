@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pokemon-servive
+  codec:
+    max-in-memory-size: 50MB
+
+api:
+  path: http://test-server
