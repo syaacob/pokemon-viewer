@@ -1,0 +1,32 @@
+<div class="flex-container">
+    <div>
+        <img [src]="content.defaultImage" class="responsive" />
+    </div>
+    <div>
+        <div class="flex-container-item">
+            <div>
+                <h2>#{{content.id}} - {{content.name}}</h2>
+            </div>
+            <div>
+               Base Experience: {{content.baseExperience}}
+            </div>
+            <div>
+                <app-pokemon-types [typeData]="content.types"></app-pokemon-types>  
+            </div>
+           
+            <div>
+                <app-pokemon-abilities [abilityData]="content.abilities"></app-pokemon-abilities>
+            </div>
+            <div>
+                <app-pokemon-stat [statData]="content.stats"></app-pokemon-stat>
+            </div>
+
+            <div>
+                <button mat-flat-button (click)="goBack()">Home</button>
+            </div>
+
+        </div>
+      
+    </div> 
+</div>
+        

@@ -1,0 +1,26 @@
+<div *ngIf="dataSet.length">
+    <button mat-raised-button color="primary" (click)="refreshPage()">Refresh</button>
+
+    <mat-card appearance="outlined" *ngFor ="let e of dataSet" class="poke-card">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title> {{e.name}}</mat-card-title>
+                <mat-card-subtitle>{{e.baseExperience}}</mat-card-subtitle>
+                <img mat-card-sm-image [src]="e.avatar" >
+            </mat-card-title-group>  
+        </mat-card-header>
+        <mat-card-actions>
+            <a mat-button routerLink="/pokemon/{{e.id}}">Learn More</a>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-paginator
+    [length]="totalItems"
+    [pageSize]="limit"
+    [pageSizeOptions]="[5, 10, 25, 50]"
+    (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+<div *ngIf="!dataSet.length">
+    <p>Loading data...</p>
+</div>
